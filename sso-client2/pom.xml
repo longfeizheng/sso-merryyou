@@ -30,4 +30,7 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>sso-client2</finalName>
+    </build>
 </project>
