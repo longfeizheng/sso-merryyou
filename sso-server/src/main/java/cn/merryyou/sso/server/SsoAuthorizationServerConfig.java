@@ -19,8 +19,13 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
  */
 @Configuration
 @EnableAuthorizationServer
-public class SosAuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+public class SsoAuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
+    /**
+     * 客户端一些配置
+     * @param clients
+     * @throws Exception
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
@@ -35,21 +40,39 @@ public class SosAuthorizationServerConfig extends AuthorizationServerConfigurerA
                 .scopes("all");
     }
 
+    /**
+     * 配置jwttokenStore
+     * @param endpoints
+     * @throws Exception
+     */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints.tokenStore(jwtTokenStore()).accessTokenConverter(jwtAccessTokenConverter());
     }
 
+    /**
+     * springSecurity 授权表达式，访问merryyou tokenkey时需要经过认证
+     * @param security
+     * @throws Exception
+     */
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.tokenKeyAccess("isAuthenticated()");
     }
 
+    /**
+     * JWTtokenStore
+     * @return
+     */
     @Bean
     public TokenStore jwtTokenStore() {
         return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
+    /**
+     * 生成JTW token
+     * @return
+     */
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter(){
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();

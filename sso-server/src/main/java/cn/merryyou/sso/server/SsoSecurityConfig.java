@@ -11,13 +11,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
+ * spring Security配置
  * Created on 2017/12/26.
  *
  * @author zlf
  * @since 1.0
  */
 @Configuration
-public class SosSecurityConfig extends WebSecurityConfigurerAdapter {
+public class SsoSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserDetailsService userDetailsService;
@@ -29,7 +30,22 @@ public class SosSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin().and().authorizeRequests().anyRequest().authenticated();
+        http.formLogin().loginPage("/authentication/require")
+                .loginProcessingUrl("/authentication/form")
+                .and().authorizeRequests()
+                .antMatchers("/authentication/require",
+                        "/authentication/form",
+                        "/**/*.js",
+                        "/**/*.css",
+                        "/**/*.jpg",
+                        "/**/*.png",
+                        "/**/*.woff2"
+                )
+                .permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .csrf().disable();
+//        http.formLogin().and().authorizeRequests().anyRequest().authenticated();
     }
 
     @Override
