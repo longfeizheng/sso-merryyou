@@ -22,6 +22,6 @@ public class SsoResourceApplication {
     @GetMapping("/api/{id}")
     public String get(@PathVariable("id") String id) {
         System.out.println("id=" + id);
-        return id;
+        return "hello resource";
     }
 }
