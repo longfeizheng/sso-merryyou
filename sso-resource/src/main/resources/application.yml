@@ -1,0 +1,13 @@
+auth-server: http://localhost:8082/uaa # sso-server地址
+server:
+  port: 8085
+  context-path: /resource
+security:
+  oauth2:
+    client:
+      client-id: merryyou1
+      client-secret: merryyousecrect1
+    resource:
+      token-info-uri: ${auth-server}/oauth/check-token
+      jwt:
+         key-uri: ${auth-server}/oauth/token_key #解析jwt令牌所需要密钥的地址

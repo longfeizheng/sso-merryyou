@@ -32,12 +32,12 @@ public class SsoAuthorizationServerConfig extends AuthorizationServerConfigurerA
                 .withClient("merryyou1")
                 .secret("merryyousecrect1")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
-                .scopes("all")
+                .scopes("all","read","write")
                 .and()
                 .withClient("merryyou2")
                 .secret("merryyousecrect2")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
-                .scopes("all");
+                .scopes("all","read","write");
     }
 
     /**
