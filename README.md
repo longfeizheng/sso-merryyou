@@ -216,3 +216,5 @@ security:
 4. http://localhost:8083/client1/ 用户名随意，密码123456
 5. http://localhost:8083/client1/user 查看当前的用户信息
 
+## update2018年1月28日
+增加sso-resource(支持sso-client1资源服务器)
