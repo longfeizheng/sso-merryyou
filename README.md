@@ -218,3 +218,5 @@ security:
 
 ## update2018年1月28日
 增加sso-resource(支持sso-client1资源服务器)
+## update2018年2月1日
+由[laungcisin](https://github.com/laungcisin)提供`SsoAuthorizationServerConfig`自动授权配置`autoApprove(true)`
