@@ -1,0 +1,30 @@
+version: '3'
+services:
+  sso-server:
+   image: merryyou/sso-server:latest
+   restart: always
+   ports:
+     - "8082:8082"
+#   command:
+#    - "--server.port=8082"
+  sso-client1:
+    image: merryyou/sso-client1:latest
+    restart: always
+    ports:
+      - 8083:8083
+    links:
+      - sso-server
+  sso-client2:
+    image: merryyou/sso-client2:latest
+    restart: always
+    ports:
+      - 8084:8084
+    links:
+      - sso-server
+  sso-resource:
+    image: merryyou/sso-resource:latest
+    restart: always
+    ports:
+      - 8085:8085
+    links:
+      - sso-server
