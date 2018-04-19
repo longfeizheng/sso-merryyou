@@ -216,7 +216,9 @@ security:
 4. http://localhost:8083/client1/ 用户名随意，密码123456
 5. http://localhost:8083/client1/user 查看当前的用户信息
 
-## update2018年1月28日
+## update2018年01月28日
 增加sso-resource(支持sso-client1资源服务器)
-## update2018年2月1日
+## update2018年02月01日
 由[laungcisin](https://github.com/laungcisin)提供`SsoAuthorizationServerConfig`自动授权配置`autoApprove(true)`
+## update2018年04月19日
+添加`docker-compose`启动方式，需在本地host文件中添加`127.0.0.1 sso-server sso-client1 sso-client2 sso-resource`.访问地址为：[http://sso-client1:8083/client1](http://sso-client1:8083/client1)
