@@ -1,4 +1,4 @@
-auth-server: http://localhost:8082/uaa
+auth-server: http://sso-server:8082/uaa
 server:
   context-path: /client2
   port: 8084

@@ -34,7 +34,7 @@ public class SsoClient1Application {
         return user;
     }
 
-    @Value("${messages.url:http://localhost:8085}/resource/api")
+    @Value("${messages.url:http://sso-resource:8085}/resource/api")
     String messagesUrl;
 
     public static void main(String[] args) {
