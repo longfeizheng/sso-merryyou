@@ -1,4 +1,4 @@
-auth-server: http://sso-server:8082/uaa # sso-server地址
+auth-server: http://sso-login:8082/uaa # sso-server地址
 server:
   port: 8085
   context-path: /resource

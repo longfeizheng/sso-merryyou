@@ -221,4 +221,4 @@ security:
 ## update2018年02月01日
 由[laungcisin](https://github.com/laungcisin)提供`SsoAuthorizationServerConfig`自动授权配置`autoApprove(true)`
 ## update2018年04月19日
-添加`docker-compose`启动方式，需在本地host文件中添加`127.0.0.1 sso-server sso-client1 sso-client2 sso-resource`.访问地址为：[http://sso-client1:8083/client1](http://sso-client1:8083/client1)
+添加`docker-compose`启动方式，需在本地host文件中添加`127.0.0.1 sso-login sso-taobao sso-tmall sso-resource`.访问地址为：[http://sso-taobao:8083/client1](http://sso-taobao:8083/client1)
