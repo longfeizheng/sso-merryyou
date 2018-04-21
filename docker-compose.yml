@@ -1,28 +1,28 @@
 version: '3'
 services:
   sso-login:
-   image: merryyou/sso-server:latest
+   image: hub.c.163.com/longfeizheng/sso-server:latest
    restart: always
    ports:
      - "8082:8082"
 #   command:
 #    - "--server.port=8082"
   sso-taobao:
-    image: merryyou/sso-client1:latest
+    image: hub.c.163.com/longfeizheng/sso-client1:latest
     restart: always
     ports:
       - 8083:8083
     links:
       - sso-login
   sso-tmall:
-    image: merryyou/sso-client2:latest
+    image: hub.c.163.com/longfeizheng/sso-client2:latest
     restart: always
     ports:
       - 8084:8084
     links:
       - sso-login
   sso-resource:
-    image: merryyou/sso-resource:latest
+    image: hub.c.163.com/longfeizheng/sso-resource:latest
     restart: always
     ports:
       - 8085:8085
