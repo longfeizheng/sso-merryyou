@@ -1,28 +1,28 @@
 version: '3'
 services:
   sso-login:
-   image: hub.c.163.com/longfeizheng/sso-server:latest
+   image: hub.c.163.com/longfeizheng/sso-server:1.0
    restart: always
    ports:
      - "8082:8082"
 #   command:
 #    - "--server.port=8082"
   sso-taobao:
-    image: hub.c.163.com/longfeizheng/sso-client1:latest
+    image: hub.c.163.com/longfeizheng/sso-client1:1.0
     restart: always
     ports:
       - 8083:8083
     links:
       - sso-login
   sso-tmall:
-    image: hub.c.163.com/longfeizheng/sso-client2:latest
+    image: hub.c.163.com/longfeizheng/sso-client2:1.0
     restart: always
     ports:
       - 8084:8084
     links:
       - sso-login
   sso-resource:
-    image: hub.c.163.com/longfeizheng/sso-resource:latest
+    image: hub.c.163.com/longfeizheng/sso-resource:1.0
     restart: always
     ports:
       - 8085:8085
