@@ -222,3 +222,5 @@ security:
 由[laungcisin](https://github.com/laungcisin)提供`SsoAuthorizationServerConfig`自动授权配置`autoApprove(true)`
 ## update2018年04月19日
 添加`docker-compose`启动方式，需在本地host文件中添加`127.0.0.1 sso-login sso-taobao sso-tmall sso-resource`.访问地址为：[http://sso-taobao:8083/client1](http://sso-taobao:8083/client1)
+## update2018年04月22日
+添加[SpringBoot+Docker+Git+Jenkins实现简易的持续集成和持续部署](https://longfeizheng.github.io/2018/04/22/SpringBoot+Docker+Git+Jenkins%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E7%9A%84%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%92%8C%E9%83%A8%E7%BD%B2/)
