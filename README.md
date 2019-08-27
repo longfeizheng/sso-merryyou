@@ -226,3 +226,13 @@ security:
 添加[SpringBoot+Docker+Git+Jenkins实现简易的持续集成和持续部署](https://longfeizheng.github.io/2018/04/22/SpringBoot+Docker+Git+Jenkins%E5%AE%9E%E7%8E%B0%E7%AE%80%E6%98%93%E7%9A%84%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E5%92%8C%E9%83%A8%E7%BD%B2/)
 ## update2018年05月09日
 升级[springboot2.0单点登录](https://github.com/longfeizheng/springboot2.0-sso-merryyou)
+
+---
+[![https://niocoder.com/assets/images/qrcode.jpg](https://niocoder.com/assets/images/qrcode.jpg "https://niocoder.com/assets/images/qrcode.jpg")](https://niocoder.com/assets/images/qrcode.jpg "https://niocoder.com/assets/images/qrcode.jpg")
+
+> 🙂🙂🙂关注微信公众号**java干货**
+不定期分享干货资料
+
+## Start统计
+
+[![Stargazers over time](https://starcharts.herokuapp.com/longfeizheng/sso-merryyou.svg)](https://starcharts.herokuapp.com/longfeizheng/sso-merryyou)
